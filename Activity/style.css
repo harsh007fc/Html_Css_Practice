@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar{
+    height: 12vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+}
+
+.filter_container{
+    height: 60%;
+    /* border: 1px solid red; */
+    width: 14rem;
+    margin-right: 5rem;
+    border-radius: 0.3rem;
+    background-color: #353b48;
+    display: flex;
+    
+}
+
+.filter{
+    height: 100%;
+    width: 25%;
+    /* border: 1px solid red;  */
+    border-radius: 0.3rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.filter_color
+{
+    height:50%;
+    width:50%;
+    /* border: 1px solid red; */
+    border-radius: 0.3rem ;
+   
+}
+.pink{
+    background-color: #e056fd;
+}
+.blue{
+    background-color: #0097e6;
+}
+.green{
+    background-color: #4cd137;
+}
+.black{
+    background-color:#1e272e;
+}
+.action_container
+{
+    height: 57%;
+    /* border: 1px solid red; */
+    width: 8rem;
+    border-radius: 0.3rem;
+    background-color: #353b48;
+    display: flex;
+}
+.icon_container{
+    width:50%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
