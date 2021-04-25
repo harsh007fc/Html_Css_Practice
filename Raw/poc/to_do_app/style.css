@@ -26,10 +26,14 @@ body{
 .input_box
 {
     
-    margin:20px 20px;
+    
     font-family: 'Zen Dots',cursive;
     height:50%;
-    font-size: 1.5rem;  
+    font-size: 1.5rem; 
+    display: block; 
+    margin:0 auto;
+    margin-top: 30px;
+    width: 60vw;
 }
 .task{
     list-style: none;
@@ -38,7 +42,7 @@ body{
     height:1.25rem;
     text-align: center;
     
-    width:60vh;
+    width:60vw;
     margin: auto;
     margin-bottom: 0.5vh;
 }
@@ -50,4 +54,13 @@ body{
 .instruction
 {
     font-size: 1.75rem;
+}
+
+
+/* these are declared to give screen specified styling */
+/* if condition satishfed then only it will apply on screen */
+@media screen and (max-width : 700px) {
+    body{
+        background-color: red;
+    }
 }
