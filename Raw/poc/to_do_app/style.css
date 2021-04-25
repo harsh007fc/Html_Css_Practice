@@ -1,3 +1,7 @@
+*
+{
+    box-sizing: border-box;
+}
 body{
     margin:0;
     background-color:lightpink;
@@ -33,10 +37,17 @@ body{
     /* background color k liye height aur width */
     height:1.25rem;
     text-align: center;
-    margin-bottom: 1.5vh;
+    
+    width:60vh;
+    margin: auto;
+    margin-bottom: 0.5vh;
 }
-.task_list
+/* .task_list
 {
     width:50vw;
     margin-left:25%; 
+} */
+.instruction
+{
+    font-size: 1.75rem;
 }

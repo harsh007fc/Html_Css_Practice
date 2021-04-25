@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types</title>
+    <style>
+        /* inline elements ko height and width nhi de skte */
+        /* padding de skte hain */
+        .inline
+        {
+            background-color: cyan;
+            font-size: 1.5rem;
+            padding: 10px;
+            margin: 10px;
+        }
+        /* height width ab kuch de skte hain */
+        .block
+        {
+            background-color: yellow;
+            margin: 10px auto;
+            /* margin-top : 15px; */
+            height: 200px;
+            width: 200px;
+        }
+
+        .inline_block
+        {
+            display: inline-block;
+            background-color: tomato;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <span class="inline">I am span</span>
+    <span class="inline">I am span</span>
+    <span class="inline">I am span</span>
+
+    <div class="block">I am a block</div>
+    
+    <div class="block">I am a block</div>
+
+    <div class="block">I am a block</div>
+
+
+    <div class="inline_block">I am an Inline Block</div>
+    
+    <div class="inline_block">I am an Inline Block</div>
+
+    <div class="inline_block">I am an Inline Block</div>
+</body>
+</html>
