@@ -77,3 +77,51 @@ body{
 .main_container{
     height:88vh;
 }
+
+
+/* modal container */
+.modal_container
+{
+    position:absolute;
+    height:18rem;
+    width: 30rem;
+    background-color: antiquewhite;
+    left:35vw;
+    top:30vh;
+    display: flex;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.675);
+}
+
+.input_container{
+    height:100%;
+    width:70%;
+}
+
+.modal_filter_container{
+    height:100%;
+    width:30%;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding:1.5rem 1.2rem;
+}
+
+.popup_filter{
+    height:15%;
+    width:45%;
+    border-radius: 0.2rem ;
+}
+.modal_input
+{
+    height:100%;
+    width:100%;
+    font-size: 1.5rem;
+    outline: none;
+    padding: 2rem 3rem;
+    font-family: 'New Tegomin', serif;
+    /* space in b/w lines */
+    line-height: 125%;
+    font-weight: 300;
+}
