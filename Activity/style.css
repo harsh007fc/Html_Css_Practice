@@ -5,6 +5,8 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'New Tegomin', serif;
+    background-color:#f5f6fa;
 }
 
 .toolbar{
@@ -74,9 +76,7 @@ body{
     justify-content: center;
 }
 
-.main_container{
-    height:88vh;
-}
+
 
 
 /* modal container */
@@ -124,4 +124,46 @@ body{
     /* space in b/w lines */
     line-height: 125%;
     font-weight: 300;
+}
+
+.border{
+    border:2px solid white;
+}
+
+
+/* task css */
+
+
+
+.main_container{
+    height:88vh;
+    background-color:#f5f6fa;
+    padding-top:2rem;
+    padding-left:3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.task_filter{
+    height:6%;
+}
+
+.task_desc_container{
+    padding-left:0.5rem;
+}
+
+.task_desc{
+    text-align: center;
+}
+
+.task_container{
+    background-color: #fff;
+    height:10rem;
+    width:16rem;
+}
+
+.uid{
+    color:#444;
 }
