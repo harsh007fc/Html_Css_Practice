@@ -19,11 +19,13 @@
             /* top-bottom   left-right */
             /* margin: 20px 500px;   */
             display: flex;
+            flex-direction: row;
             height: 600px;
             /* vertical allignmnet k liye */
-            align-items:center;
+            align-items:flex-start;
             /* children ki horixontal alignment set krta hai */
-            justify-content: space-between;
+            justify-content:center;
+            flex-wrap: wrap;
         }
         .child
         {
@@ -39,6 +41,18 @@
 </head>
 <body>
     <div class="parent">
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
         <div class="child">child</div>
         <div class="child">child</div>
         <div class="child">child</div>
