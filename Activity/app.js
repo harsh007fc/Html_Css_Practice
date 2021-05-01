@@ -103,22 +103,26 @@ function createTask(color,task)
 
 
     let taskFilter = taskContainer.querySelector(".task_filter");
-    taskFilter.addEventListener("click",function changeColor()
-    {
-        let cColor =  taskFilter.classList[1];
-        let idx = colorArr.indexOf(cColor);
-        let newColorIdx = (idx +1) % 4;
-        taskFilter.classList.remove(cColor);
-        taskFilter.classList.add(colorArr[newColorIdx]);
-    })
+    // taskFilter.addEventListener("click",function changeColor()
+    // { //feature of color changing
+    //     let cColor =  taskFilter.classList[1];
+    //     let idx = colorArr.indexOf(cColor);
+    //     let newColorIdx = (idx +1) % 4;
+    //     taskFilter.classList.remove(cColor);
+    //     taskFilter.classList.add(colorArr[newColorIdx]);
+    // })
+    taskFilter.addEventListener("click",changeColor);
 
 }
 
-// function changeColor()
-// {
-//     let cColor =  taskFilter.classList[1];
-//     let idx = colorArr.indexOf(cColor);
-//     let newColor = (idx +1) % 4;
-// }
+function changeColor(e)
+{
+    let taskFilter = e.currentTarget;
+    let cColor =  taskFilter.classList[1];
+    let idx = colorArr.indexOf(cColor);
+    let newColorIdx = (idx +1) % 4;
+    taskFilter.classList.remove(cColor);
+    taskFilter.classList.add(colorArr[newColorIdx]);
+}
 
 // let taskFilter = document.querySelectorAll(".task_filter");
