@@ -68,6 +68,9 @@ body{
     background-color: #353b48;
     display: flex;
 }
+
+
+/* icons css */
 .icon_container{
     width:50%;
     /* border: 1px solid red; */
@@ -76,7 +79,9 @@ body{
     justify-content: center;
 }
 
-
+.active{
+    background-color:#555;
+}
 
 
 /* modal container */

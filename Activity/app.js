@@ -3,10 +3,16 @@ let colorBtn = document.querySelectorAll(".filter_color");
 let mainContainer = document.querySelector(".main_container");
 let body = document.body;
 
+let crossBtn = document.querySelector(".fa-times");
+
 let plusButton = document.querySelector(".fa-plus");
 
 let colorArr = ["pink","blue","green","black"];
 
+let deleteState = false;
+
+
+crossBtn.addEventListener("click",setDeleteState);
 
 
 // let removeModalContainer = document.getElementById("removed");
@@ -19,15 +25,6 @@ for(let i = 0; i < colorBtn.length; i++)
         mainContainer.style.backgroundColor  = color;
     })
 }
-
-
-// to count clicks so tjhat on odd click display modal
-
-// let count = 0;
-// plusButton.onclick = function() {
-//   count += 1;
-// };
-
 
 plusButton.addEventListener("click", createModal);
 
@@ -114,16 +111,9 @@ function createTask(color,task)
 
 
     let taskFilter = taskContainer.querySelector(".task_filter");
-    // taskFilter.addEventListener("click",function changeColor()
-    // { //feature of color changing
-    //     let cColor =  taskFilter.classList[1];
-    //     let idx = colorArr.indexOf(cColor);
-    //     let newColorIdx = (idx +1) % 4;
-    //     taskFilter.classList.remove(cColor);
-    //     taskFilter.classList.add(colorArr[newColorIdx]);
-    // })
     taskFilter.addEventListener("click",changeColor);
 
+    taskContainer.addEventListener("click",deleteTask);
 }
 
 function changeColor(e)
@@ -136,4 +126,28 @@ function changeColor(e)
     taskFilter.classList.add(colorArr[newColorIdx]);
 }
 
-// let taskFilter = document.querySelectorAll(".task_filter");
+function setDeleteState(e)
+{
+    let crossBtn = e.currentTarget;
+    let parent = crossBtn.parentNode;
+    
+    if(deleteState == false)
+    {
+        parent.classList.add("active");
+    }
+    else
+    {
+        parent.classList.remove("active");
+    }
+    deleteState = !deleteState;
+}
+
+
+function deleteTask(e)
+{
+    let taskContainer = e.currentTarget;
+    if(deleteState)
+    {
+        taskContainer.remove();
+    }
+}
