@@ -4,6 +4,8 @@ let body = document.body;
 
 let plusButton = document.querySelector(".fa-plus");
 
+let colorArr = ["pink","blue","green","black"];
+
 
 
 // let removeModalContainer = document.getElementById("removed");
@@ -88,6 +90,7 @@ function handleModal(modal_container)
 
 function createTask(color,task)
 {
+    //feature of color change on clicking
     let taskContainer = document.createElement("div");
     taskContainer.setAttribute("class","task_container");
     taskContainer.innerHTML = ` <div class="task_filter ${color}"></div>
@@ -97,27 +100,25 @@ function createTask(color,task)
     </div>`;
 
     mainContainer.appendChild(taskContainer);
+
+
+    let taskFilter = taskContainer.querySelector(".task_filter");
+    taskFilter.addEventListener("click",function changeColor()
+    {
+        let cColor =  taskFilter.classList[1];
+        let idx = colorArr.indexOf(cColor);
+        let newColorIdx = (idx +1) % 4;
+        taskFilter.classList.remove(cColor);
+        taskFilter.classList.add(colorArr[newColorIdx]);
+    })
+
 }
 
+// function changeColor()
+// {
+//     let cColor =  taskFilter.classList[1];
+//     let idx = colorArr.indexOf(cColor);
+//     let newColor = (idx +1) % 4;
+// }
 
-
-
-
-
-
-
-
-
-
-
-{/* <div class="modal_container">
-    <div class="input_container">
-        <textarea class="modal_input" placeholder="Enter Your Task"></textarea>
-    </div>
-    <div class="modal_filter_container">
-        <div class="popup_filter pink"></div>
-        <div class="popup_filter blue"></div>
-        <div class="popup_filter green"></div>
-        <div class="popup_filter black"></div>
-    </div>
-</div> */}
+// let taskFilter = document.querySelectorAll(".task_filter");

@@ -86,7 +86,8 @@ body{
     height:18rem;
     width: 30rem;
     background-color: antiquewhite;
-    left:35vw;
+    /* left:35%; */
+    left : calc((100vw - 36rem)/2);
     top:30vh;
     display: flex;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.675);
