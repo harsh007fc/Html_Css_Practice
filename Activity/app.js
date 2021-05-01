@@ -1,3 +1,4 @@
+'use strict'; //global wale mein error deta hai
 let colorBtn = document.querySelectorAll(".filter_color");
 let mainContainer = document.querySelector(".main_container");
 let body = document.body;
@@ -32,10 +33,14 @@ plusButton.addEventListener("click", createModal);
 
 
 function createModal() {
-    let modal_container = document.createElement("div");
-    modal_container.setAttribute("class", "modal_container");
+
+    let modalContainer = document.querySelector(".modal_container");
+    if(modalContainer == null)
+    {
+          modalContainer = document.createElement("div");
+         modalContainer.setAttribute("class", "modal_container");
     // modal_container.setAttribute("id", "removed");
-    modal_container.innerHTML = `<div class="input_container">
+    modalContainer.innerHTML = `<div class="input_container">
     <textarea class="modal_input" placeholder="Enter Your Task"></textarea>
 </div>
 <div class="modal_filter_container">
@@ -45,9 +50,15 @@ function createModal() {
     <div class="popup_filter black"></div>
 </div>`;
 
-    body.appendChild(modal_container);
+    body.appendChild(modalContainer);
+    handleModal(modalContainer);
+    }
+    let textarea = modalContainer.querySelector(".modal_input");
+    textarea.value = "";
+
     
-    handleModal(modal_container);
+    
+    // handleModal(modalContainer);
 };
 
 
