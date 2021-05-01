@@ -94,9 +94,9 @@ function createTask(color,task)
     let taskContainer = document.createElement("div");
     taskContainer.setAttribute("class","task_container");
     taskContainer.innerHTML = ` <div class="task_filter ${color}"></div>
-    <div class="task_desc_container">
+    <div class="task_desc_container" >
         <h3 class="uid">#example</h3>
-        <div class="task_desc">${task}</div>
+        <div class="task_desc" contenteditable = "true">${task}</div>
     </div>`;
 
     mainContainer.appendChild(taskContainer);
