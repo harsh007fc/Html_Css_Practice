@@ -98,12 +98,15 @@ function handleModal(modal_container)
 
 function createTask(color,task)
 {
+    //   Instantiate id 
+      let uid = new ShortUniqueId();
+
     //feature of color change on clicking
     let taskContainer = document.createElement("div");
     taskContainer.setAttribute("class","task_container");
     taskContainer.innerHTML = ` <div class="task_filter ${color}"></div>
     <div class="task_desc_container" >
-        <h3 class="uid">#example</h3>
+        <h3 class="uid">#${uid()}</h3>
         <div class="task_desc" contenteditable = "true">${task}</div>
     </div>`;
 
